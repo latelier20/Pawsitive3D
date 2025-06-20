@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawsitive3D - Prothèses 3D pour animaux handicapés</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .hero-pattern {
-            background-color: #f0f9ff;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2393c5fd' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawsitive3D - Prothèses 3D pour animaux handicapés</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-pattern {
+      background-color: #f0f9ff;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2393c5fd' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
 </head>
 <body class="bg-blue-50">
-    <!-- Navigation -->
-    <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z" fill="white"/>
-                        <path d="M16 9C17.1046 9 18 8.10457 18 7C18 5.89543 17.1046 5 16 5C14.8954 5 14 5.89543 14 7C14 8.10457 14.8954 9 16 9Z" fill="white"/>
-                        <path d="M5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14Z" fill="white"/>
-                        <path d="M19 14C20.1046 14 21 13.1046 21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12C17 13.1046 17.8954 14 19 14Z" fill="white"/>
-                        <path d="M12 16C13.6569 16 15 17.3431 15 19V21H9V19C9 17.3431 10.3431 16 12 16Z" fill="white"/>
-                        <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" fill="white"/>
-                    </svg>
-                    <span class="text-xl font-bold">Pawsitive3D</span>
-                </div>
-                
-                <div class="hidden md:flex space-x-6">
-                    <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
-                    <a href="#demande" class="hover:text-blue-200 transition">Demander une prothèse</a>
-                    <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
-                    <a href="#garantie" class="hover:text-blue-200 transition">Garantie</a>
-                    <a href="#prix" class="hover:text-blue-200 transition">Prix</a>
-                </div>
-                
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile menu -->
+  <!-- Navigation -->
+  <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z" fill="white" />
+            <path d="M16 9C17.1046 9 18 8.10457 18 7C18 5.89543 17.1046 5 16 5C14.8954 5 14 5.89543 14 7C14 8.10457 14.8954 9 16 9Z" fill="white" />
+            <path d="M5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14Z" fill="white" />
+            <path d="M19 14C20.1046 14 21 13.1046 21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12C17 13.1046 17.8954 14 19 14Z" fill="white" />
+            <path d="M12 16C13.6569 16 15 17.3431 15 19V21H9V19C9 17.3431 10.3431 16 12 16Z" fill="white" />
+            <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" fill="white" />
+          </svg>
+          <span class="text-xl font-bold">Pawsitive3D</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
+          <a href="#demande" class="hover:text-blue-200 transition">Demander une prothèse</a>
+          <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+          <a href="#garantie" class="hover:text-blue-200 transition">Garantie</a>
+          <a href="#prix" class="hover:text-blue-200 transition">Prix</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+        <div class="flex flex-col space-y-3">
+          <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
+          <a href="#demande" class="hover:text-blue-200 transition">Demander une prothèse</a>
+          <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+          <a href="#garantie" class="hover:text-blue-200 transition">Garantie</a>
+          <a href="#prix" class="hover:text-blue-200 transition">Prix</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+ <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
                 <div class="flex flex-col space-y-3">
                     <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
@@ -356,72 +365,62 @@
 
     <!-- Warranty Section -->
     <section id="garantie" class="bg-white py-16">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Notre garantie</h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto">Nous nous engageons à fournir des prothèses de la plus haute qualité et à assurer votre satisfaction.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Garantie de qualité -->
-      <div class="bg-blue-50 p-6 sm:p-8 rounded-lg shadow-md">
-        <h3 class="text-xl md:text-2xl font-semibold text-blue-800 mb-6">Garantie de qualité</h3>
-        <ul class="space-y-4 pl-2">
-          <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1 text-blue-600">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0..."/></svg>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Notre garantie</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">Nous nous engageons à fournir des prothèses de la plus haute qualité et à assurer votre satisfaction.</p>
             </div>
-            <div class="ml-3 text-gray-700">Matériaux premium biocompatibles, testés pour leur durabilité.</div>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1 text-blue-600">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0..."/></svg>
-            </div>
-            <div class="ml-3 text-gray-700">Conception sur mesure pour chaque animal.</div>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1 text-blue-600">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0..."/></svg>
-            </div>
-            <div class="ml-3 text-gray-700">Contrôle qualité rigoureux avant livraison.</div>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1 text-blue-600">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0..."/></svg>
-            </div>
-            <div class="ml-3 text-gray-700">Validé par des vétérinaires spécialisés.</div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Conditions de garantie -->
-      <div class="bg-blue-50 p-6 sm:p-8 rounded-lg shadow-md">
-        <h3 class="text-xl md:text-2xl font-semibold text-blue-800 mb-6">Conditions de garantie</h3>
-        <div class="space-y-4 text-gray-700">
-          <div>
-            <h4 class="text-lg font-medium text-blue-800 mb-1">Durée :</h4>
-            <p>12 mois contre tout défaut de fabrication ou de matériaux.</p>
-          </div>
-          <div>
-            <h4 class="text-lg font-medium text-blue-800 mb-1">Couvre :</h4>
-            <ul class="list-disc list-inside pl-2">
-              <li>Défauts de fabrication</li>
-              <li>Usure prématurée</li>
-              <li>Ajustements liés à la conception</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-lg font-medium text-blue-800 mb-1">Ne couvre pas :</h4>
-            <ul class="list-disc list-inside pl-2">
-              <li>Usage inapproprié</li>
-              <li>Modifications non autorisées</li>
-              <li>Croissance ou changement physique de l'animal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-6">Garantie de qualité</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-blue-800">Matériaux premium</h4>
+                                <p class="text-gray-700 mt-1">Nous utilisons uniquement des matériaux biocompatibles de haute qualité, testés pour leur durabilité et leur confort.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-blue-800">Conception personnalisée</h4>
+                                <p class="text-gray-700 mt-1">Chaque prothèse est conçue sur mesure pour s'adapter parfaitement à l'anatomie unique de votre animal.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-blue-800">Contrôle qualité rigoureux</h4>
+                                <p class="text-gray-700 mt-1">Chaque prothèse passe par plusieurs étapes de contrôle qualité avant d'être livrée.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-blue-800">Expertise vétérinaire</h4>
+                                <p class="text-gray-700 mt-1">Nos conceptions sont validées par des vétérinaires spécialisés en orthopédie animale.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 
                 <div class="bg-blue-50 p-8 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-blue-800 mb-6">Conditions de garantie</h3>
@@ -612,3 +611,6 @@
         </div>
     </div>
 </section>
+
+</body>
+</html>
