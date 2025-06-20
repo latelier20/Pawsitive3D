@@ -1,6 +1,362 @@
-<!-- Warranty Section -->
-    <section id="garantie" class="bg-white py-16">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsitive3D - Prothèses 3D pour animaux handicapés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #f0f9ff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2393c5fd' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-blue-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z" fill="white"/>
+                        <path d="M16 9C17.1046 9 18 8.10457 18 7C18 5.89543 17.1046 5 16 5C14.8954 5 14 5.89543 14 7C14 8.10457 14.8954 9 16 9Z" fill="white"/>
+                        <path d="M5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14Z" fill="white"/>
+                        <path d="M19 14C20.1046 14 21 13.1046 21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12C17 13.1046 17.8954 14 19 14Z" fill="white"/>
+                        <path d="M12 16C13.6569 16 15 17.3431 15 19V21H9V19C9 17.3431 10.3431 16 12 16Z" fill="white"/>
+                        <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold">Pawsitive3D</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
+                    <a href="#demande" class="hover:text-blue-200 transition">Demander une prothèse</a>
+                    <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+                    <a href="#garantie" class="hover:text-blue-200 transition">Garantie</a>
+                    <a href="#prix" class="hover:text-blue-200 transition">Prix</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
+                    <a href="#demande" class="hover:text-blue-200 transition">Demander une prothèse</a>
+                    <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+                    <a href="#don" class="hover:text-blue-200 transition">Faire un don</a>
+                    <a href="#garantie" class="hover:text-blue-200 transition">Garantie</a>
+                    <a href="#prix" class="hover:text-blue-200 transition">Prix</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-pattern py-16 md:py-24">
         <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">Une nouvelle vie pour votre animal</h1>
+                    <p class="text-lg text-gray-700 mb-6">Pawsitive3D conçoit et fabrique des prothèses personnalisées pour animaux handicapés grâce à l'impression 3D.</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#demande" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 text-center">Demander une prothèse</a>
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-600 font-medium py-3 px-6 rounded-lg border border-blue-600 transition duration-300 text-center">Nous contacter</a>
+                     </div>
+      </div>
+      <div class="md:w-1/2 flex justify-end">
+        <div class="image-card overflow-hidden rounded-lg border border-gray-350 w-64 h-50">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg" alt="Chien" class="object-cover w-full h-full" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+             
+
+    <!-- About Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Notre mission</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">Nous créons des solutions sur mesure pour redonner mobilité et indépendance aux animaux handicapés grâce à la technologie d'impression 3D.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">Innovation</h3>
+                    <p class="text-gray-700">Nous utilisons les dernières technologies d'impression 3D pour créer des prothèses légères, durables et parfaitement adaptées.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">Personnalisation</h3>
+                    <p class="text-gray-700">Chaque animal est unique. Nous concevons des prothèses sur mesure adaptées à la morphologie et aux besoins spécifiques de votre compagnon.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">Compassion</h3>
+                    <p class="text-gray-700">Notre passion pour le bien-être animal nous pousse à offrir des solutions abordables et accessibles pour tous les animaux dans le besoin.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">Notre processus</h3>
+                <div class="flex flex-col md:flex-row justify-between items-start">
+                    <div class="flex-1 text-center px-4 mb-8 md:mb-0">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-blue-600 text-xl font-bold">1</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-800 mb-2">Consultation</h4>
+                        <p class="text-gray-700">Évaluation des besoins spécifiques de votre animal et prise de mesures précises.</p>
+                    </div>
+                    
+                    <div class="hidden md:block w-12 pt-8">
+                        <svg class="w-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex-1 text-center px-4 mb-8 md:mb-0">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-blue-600 text-xl font-bold">2</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-800 mb-2">Conception</h4>
+                        <p class="text-gray-700">Création d'un modèle 3D personnalisé adapté à la morphologie de votre animal.</p>
+                    </div>
+                    
+                    <div class="hidden md:block w-12 pt-8">
+                        <svg class="w-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex-1 text-center px-4 mb-8 md:mb-0">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-blue-600 text-xl font-bold">3</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-800 mb-2">Fabrication</h4>
+                        <p class="text-gray-700">Impression 3D avec des matériaux biocompatibles, légers et durables.</p>
+                    </div>
+                    
+                    <div class="hidden md:block w-12 pt-8">
+                        <svg class="w-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex-1 text-center px-4">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-blue-600 text-xl font-bold">4</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-800 mb-2">Adaptation</h4>
+                        <p class="text-gray-700">Ajustement et suivi pour assurer le confort et l'efficacité de la prothèse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Request Section -->
+<section id="demande" class="bg-blue-600 py-16 text-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Demander une prothèse</h2>
+      <p class="text-lg max-w-3xl mx-auto">Complétez le formulaire ci-dessous pour démarrer le processus de création d'une prothèse personnalisée pour votre animal.</p>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto text-gray-800">
+      <form id="prosthetic-form" class="space-y-6" action="https://formspree.io/f/mldnwjvb" method="POST" enctype="multipart/form-data">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="owner-name" class="block text-sm font-medium text-gray-700 mb-1">Votre nom</label>
+            <input type="text" id="owner-name" name="owner-name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Ville</label>
+            <input type="text" id="location" name="location" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <label for="pet-type" class="block text-sm font-medium text-gray-700 mb-1">Type d'animal</label>
+            <select id="pet-type" name="pet-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+              <option value="">Sélectionner</option>
+              <option value="dog">Chien</option>
+              <option value="cat">Chat</option>
+              <option value="bird">Oiseau</option>
+              <option value="rabbit">Lapin</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="pet-name" class="block text-sm font-medium text-gray-700 mb-1">Nom de l'animal</label>
+            <input type="text" id="pet-name" name="pet-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <label for="pet-age" class="block text-sm font-medium text-gray-700 mb-1">Âge</label>
+            <input type="text" id="pet-age" name="pet-age" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+          </div>
+        </div>
+        
+        <div>
+          <label for="disability-type" class="block text-sm font-medium text-gray-700 mb-1">Type de handicap</label>
+          <select id="disability-type" name="disability-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+            <option value="">Sélectionner</option>
+            <option value="missing-limb">Membre manquant</option>
+            <option value="partial-limb">Membre partiel</option>
+            <option value="mobility-issue">Problème de mobilité</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description du besoin</label>
+          <textarea id="description" name="description" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Photos (optionnel)</label>
+          <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+            <div class="space-y-1 text-center">
+              <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div class="flex text-sm text-gray-600">
+                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                  <span>Télécharger des fichiers</span>
+                  <input id="file-upload" name="file-upload" type="file" class="sr-only" multiple>
+                </label>
+                <p class="pl-1">ou glisser-déposer</p>
+              </div>
+              <p class="text-xs text-gray-500">PNG, JPG jusqu'à 10MB</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <input id="terms" name="terms" type="checkbox" required class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1">
+          <label for="terms" class="ml-2 block text-sm text-gray-700">
+            J'accepte les <a href="#" class="text-blue-600 hover:underline">conditions d'utilisation</a> et la <a href="#" class="text-blue-600 hover:underline">politique de confidentialité</a>
+          </label>
+        </div>
+        
+        <div>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md transition duration-300">Envoyer ma demande</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-blue-800 mb-4">Contactez-nous</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Vous avez des questions ou besoin d'informations supplémentaires ? N'hésitez pas à nous contacter.</p>
+        </div>
+        
+        <div class="max-w-3xl mx-auto bg-blue-50 p-8 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-800 mb-6">Envoyez-nous un message</h3>
+            <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mgvylaqp" method="POST">
+                <div>
+                    <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                    <input type="text" id="contact-name" name="contact-name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                
+                <div>
+                    <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="contact-email" name="contact-email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                    <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        <option value="" disabled selected>Sélectionner</option>
+                        <option value="info">Demande d'information</option>
+                        <option value="quote">Demande de devis</option>
+                        <option value="support">Support technique</option>
+                        <option value="partnership">Partenariat</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Envoyer</button>
+                </div>
+            </form>
+            
+            <div class="mt-8">
+                <h4 class="text-lg font-medium text-blue-800 mb-4">Suivez-nous</h4>
+                <div class="flex space-x-4">
+                    <!-- Icones réseaux sociaux -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-blue-600 hover:text-blue-800" aria-label="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-blue-600 hover:text-blue-800" aria-label="Twitter">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></
+
+
+
+    <!-- Warranty Section -->
+    <section id="garantie" class="bg-white py-16">
+        <div class="container mx-auto px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-blue-800 mb-4">Notre garantie</h2>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto">Nous nous engageons à fournir des prothèses de la plus haute qualité et à assurer votre satisfaction.</p>
@@ -125,3 +481,124 @@
             </div>
         </div>
     </section>
+
+    <!-- Pricing Section -->
+<section id="prix" class="bg-blue-50 py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-blue-800 mb-4">Nos tarifs</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Nous proposons des solutions adaptées à tous les budgets, avec la possibilité de paiement échelonné et d'aide financière pour les cas particuliers.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+            <!-- Essentiel -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6 text-center">
+                    <h3 class="text-xl font-bold mb-1">Essentiel</h3>
+                    <div class="text-3xl font-bold mb-2">À partir de 70€</div>
+                    <p class="text-blue-100">Chat et petit chien</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-2 text-gray-700">Poids: 1kg à 6kg</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#demande" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Standard -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6 text-center">
+                    <h3 class="text-xl font-bold mb-1">Standard</h3>
+                    <div class="text-3xl font-bold mb-2">À partir de 150€</div>
+                    <p class="text-blue-100">Chien moyen</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-2 text-gray-700">Poids: 7kg à 30kg</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#demande" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Avancée -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6 text-center">
+                    <h3 class="text-xl font-bold mb-1">Avancée</h3>
+                    <div class="text-3xl font-bold mb-2">À partir de 300€</div>
+                    <p class="text-blue-100">Grand chien</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-2 text-gray-700">Prothèse renforcée</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-2 text-gray-700">Poids: 31kg à 50kg</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#demande" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6 text-center">
+                    <h3 class="text-xl font-bold mb-1">Premium</h3>
+                    <div class="text-3xl font-bold mb-2">À partir de 500€</div>
+                    <p class="text-blue-100">+ de 50kg</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-2 text-gray-700">Poids: + de 50kg</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#demande" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carbon Elite -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6 text-center">
+                    <h3 class="text-xl font-bold mb-1">Carbon Elite</h3>
+                    <p class="text-blue-100 text-sm mb-2">En matière carbone renforcée et matériau haute résistance.</p>
+                    <p class="text-blue-100 text-sm mb-4">Option pour toutes les prothèses, prix variable selon taille, à partir de 20€.</p>
+                </div>
+                <div class="p-6">
+                    <div class="mt-6">
+                        <a href="#demande" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
